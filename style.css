@@ -1,0 +1,157 @@
+:root {
+    --mins-deg: 0deg;
+    --secs-deg: 0deg;
+    --hours-deg: 0deg;
+  }
+
+  .container {
+    height: 300px;
+    width: 300px;
+    border: 20px solid red;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .secs-div {
+    position: fixed;
+    animation: RotateSecs 60s steps(60) infinite;
+  }
+
+  .sec1,
+  .sec2 {
+    height: 120px;
+    width: 0;
+    border: 5px solid rgb(0, 200, 255);
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+  }
+
+  @keyframes RotateSecs {
+    0% {
+      transform: rotate(var(--secs-deg));
+    }
+
+    100% {
+      transform: rotate(calc(var(--secs-deg) + 360deg));
+    }
+  }
+
+  .center {
+    background-color: red;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    z-index: 9;
+  }
+
+  .sec2 {
+    border: none;
+  }
+
+  @keyframes RotateMins {
+    0% {
+      transform: rotate(var(--mins-deg));
+    }
+
+    100% {
+      transform: rotate(calc(var(--mins-deg) + 360deg));
+    }
+  }
+
+  .mins-div {
+    position: fixed;
+    animation: RotateMins 3600s linear 0s;
+  }
+
+  .min1,
+  .min2 {
+    height: 110px;
+    width: 0;
+    border: 7px solid black;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+  }
+
+  .min2 {
+    border: none;
+  }
+
+  @keyframes RotateHours {
+    0% {
+      transform: rotate(var(--hours-deg));
+    }
+
+    100% {
+      transform: rotate(calc(var(--hours-deg) + 360deg));
+    }
+  }
+
+  .hours-div {
+    position: fixed;
+    animation: RotateHours 43200s linear 0s;
+  }
+
+  .hour1,
+  .hour2 {
+    height: 90px;
+    width: 0;
+    border: 7px solid black;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+  }
+
+  .hour2 {
+    border: none;
+  }
+
+  .h1 {
+    position: absolute;
+    height: 20px;
+    width: 9px;
+    background-color: black;
+    border-radius: 10px;
+  }
+
+  #top {
+    top: 35px;
+  }
+
+  #bottom {
+    top: 294px;
+  }
+
+  .l1 {
+    position: absolute;
+    height: 9px;
+    width: 20px;
+    background-color: black;
+    border-radius: 10px;
+  }
+
+  #left {
+    left: 35px;
+  }
+
+  #right {
+    left: 294px;
+  }
+
+  .myclass {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .digital-time {
+    font-size: 35px;
+    font-weight: 900;
+    text-align: center;
+    margin-top: 20px;
+    background-color: red;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+  }

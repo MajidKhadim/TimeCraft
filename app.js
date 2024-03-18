@@ -21,7 +21,7 @@ function update_time() {
   let secs = curr_date.getSeconds();
   if (secs < 1) {
     let mins = curr_date.getMinutes();
-    let hours1 = curr_date.getHours();
+    let hours1 = curr_date.getHours()%12;
     root.style.setProperty('--hours-deg', `${hours1 * 6}deg`);
     root.style.setProperty('--mins-deg', `${mins * 6}deg`);
   }
